@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Fira+Sans:wght@200;300;400&display=swap');
+
+*{
+padding: 0;
+margin: 0;
+font-family: "fira sans", serif;
+font-weight: 200;
+font-style: light;
+}
+
+.grid-principal{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header header nav"
+    "main main ."
+    "footer footer ."
+    ;
+}
+/*! INDEX */
+.menu{
+    background-color: #ff7757;
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+/**ESTAS SON LAS CONFIGURACIONES DEL BOTON Y LOS LINKS DEL NAV-BAR */
+.btn-position{
+    margin: 5px;
+}
+.color-canvas{
+    background-color: #ff7757;
+}
+.btn-color{
+    background-color:#002e33;
+    color: white;
+}
+.btn-color:hover{
+    background-color: white;
+}
+.btn-color2{
+    background-color: #002e33;
+    color: white;
+}
+.btn-color2:hover{
+    background-color: #ff7757;
+}
+.nav-item-style{
+    border-bottom: #002e33 1px solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.nav-item-style:hover{
+    color: white;
+}
+/**HEADER PARA TODAS LAS PAGINAS MENOS EL INDEX */
+.template-standar{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows:repeat(4, auto);
+    grid-template-areas: 
+    "logo . . . . . . . ."
+    "imagen1 imagen1 . . titulo . . . ."
+    ". . imagen2 imagen2 . . texto texto texto"
+    ". . . . . . . . .";
+}
+.header .color-template{
+    background-color: #002e33;
+    color: white;
+}
+/**CONFIGURACION DEL HERO DEL INDEX */
+.header{
+    grid-area: header;
+}
+.hero{
+    display: grid;
+    background-color: #002e33;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "logo . . . . video1 video1 video1 ."
+    ". video2 video2 . . video1 video1 video1 ."
+    ". titulo titulo titulo titulo titulo titulo titulo ."
+    ". titulo titulo titulo titulo titulo titulo titulo ."
+    ;
+    height: 100vh;
+}
+.hero .hero-div1{
+    grid-area: logo;
+}
+.hero-div1 img{
+    width: 100%;
+    height: 100%;
+}
+.hero .hero-div2{
+    grid-area:video1 ;
+}
+.hero-div2 img{
+    width: 100%;
+    height: 100%;
+}
+.hero .hero-div3{
+    grid-area: titulo;
+    color: white;
+    text-align: center;
+}
+.hero-div3 h1{
+    font-size: 80px;
+}
+.hero .hero-div4{
+    grid-area: video2;
+}
+.hero-div4 img{
+    width: 100%;
+    height: 100%;
+}
+.contenido{
+    grid-area: main;
+}
+.pie{
+    grid-area: footer;
+}
+/*?  AQUI EMPIEZA LA SECCION NOSOTROS*/
+.nosotros{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+.nosotros .nosotrosdiv1{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.nosotros .nosotrosdiv1-h2{
+    text-align: center;
+    font-size: 30px;
+}
+.nosotros .nosotrosdiv1-p{
+    font-size: 17px;
+    text-align: center;
+    width: 300px;
+    border-left: 0.1px rgba(0, 0, 0, 0.401) solid;
+}
+.nosotros .nosotrosdiv2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nosotros .nosotrosdiv2 .nosotrosdiv2-img1{
+    display: flex;
+    align-items: end;
+}
+.nosotros .nosotrosdiv2 .nosotrosdiv2-img1 img{
+    height: 314px;
+    width: 350px;
+}
+.nosotros .nosotrosdiv2 .nosotrosdiv2-img2 img{
+    height: 314px;
+    width: 350px;
+}
+.nosotrostip{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: black;
+}
+.nosotrostip .nosotrostip-div1{
+    
+    text-align: left;
+    height: 450px;
+    background-image: url(../img/estadisticas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+}
+.nosotrostip .nosotrostip-div1 h3{
+    padding: 10px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+.nosotrostip .nosotrostip-div1 p{
+    padding: 10px;
+    width: 250px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 50px;
+}
+.nosotrostip .nosotrostip-div2{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+.nosotrostip .nosotrostip-div2 img{
+    width: 150px;
+    height: 150px;
+}
+/*? COMIENZA LA SECCION MODALIDADES*/
+.modalidades{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #002e33;
+}
+.modalidades h2{
+    margin-left: 30px;
+    padding: 40px;
+    text-align: left;
+    color: white;
+    font-size: 40px;
+}
+.modalidades .modalidades-div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.modalidades .modalidades-div img{
+    height: 400px;
+    width: 600px;
+}
+.modalidades .modalidades-div ul{
+    padding: 30px;
+    list-style: none;
+}
+.modalidades .modalidades-div ul li{
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.modalidades .modalidades-div ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+/*? EMPIEZA LA SECCION DE PRECIOS */
+.precios{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+}
+.precios .precios-div1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.precios .precios-div1 h3{
+    margin-top: 30px;
+    margin-right: 100px;
+    padding: 20px;
+    font-size: 30px;
+    color: black;
+}
+.precios .precios-div1 a{
+    margin-right: 100px;
+    text-decoration: none;
+}
+.precios .precios-div2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+.precios .precios-div2 ul{
+    list-style: none;
+    width: 70%;
+    margin-top: 40px;
+}
+.precios .precios-div2 ul li{
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.precios .precios-div2 ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+/*?  COMIERNZA EL FOOTER*/
+.contacto{
+    background-color: #002e33;
+    display: flex;
+    height: 100vh;    
+}
+.contacto .up-arrow{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+}
+.contacto .contacto-div-titulo{
+    width: 30%;
+}
+.contacto .contacto-div-titulo h2{
+    font-size: 200px;
+    border-right: white 2px solid;
+    border-width: 6px;
+    height: 100%;
+    color: white;
+}
+.contacto .contacto-divs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+}
+.contacto .contacto-divs .contacto-links ul{
+    list-style: none;
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 70%;   
+}
+.contacto .contacto-divs .contacto-links ul li{
+    padding: 10px;
+    border-bottom: 1px rgb(255, 255, 255) solid;
+}
+.contacto .contacto-divs .contacto-links ul li a{
+    text-decoration: none;
+    color: white;
+}
+.contacto .contacto-divs .contacto-redes{
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+.contacto .contacto-divs .contacto-redes ul{
+    list-style: none;
+    display: flex;
+}
+.contacto .contacto-divs .contacto-redes ul li{
+    padding: 15px;
+    color: white;
+}
+.contacto .contacto-divs .contacto-redes ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.contacto .contacto-divs .contacto-redes-ul1{
+    margin-left: 50px;
+}
+.contacto .contacto-divs .contacto-redes-ul1 img {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 10px;
+}
+.contacto .contacto-divs .contacto-redes-ul2 img{
+    height: 50px;
+    width: 50px;
+}
+/*! PAGINA NOSOTROS*/
+/*? HEADER DE NOSOTROS */
+.template-div1{
+    grid-area: logo;
+}
+.template-div1 img{
+    width: 100%;
+    height: 100%;
+}
+.template-div2{
+    grid-area: imagen1;
+}
+.template-div2 img{
+    width: 100%;
+    height: 100%;
+}
+.template-div3{
+    grid-area: imagen2;
+}
+.template-div3 img{
+    height: 100%;
+    width: 100%;
+}
+.template-div4{
+    display: flex;
+    align-items: center;
+    grid-area: texto;
+    border-left: #002e33a2 1px solid;
+}
+.template-div4 p{
+    padding: 5px;
+    text-align: center;
+}
+.template-div5{
+    grid-area: titulo;
+    display: flex;
+    align-items: center;
+}
+
+/*? MAIN DE NOSOTROS */
+.nosotros-historia{
+    background-color: #002e33;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    border: #002e33 1px solid;
+}
+.nosotros-historia-div2{
+    width: 33%;
+    color: white;
+    font-size: 17px;
+}
+.nosotros-experiencia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+}
+.nosotros-experiencia-div1{
+    width: 70%;
+    text-align: center;
+}
+.nosotros-experiencia-div1 h2{
+    font-size: 40px;
+    padding: 10px;
+}
+.nosotros-experiencia-div2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nosotros-experiencia-div2 p{
+    text-align: center;
+    padding: 10px;
+    width: 40%;
+    font-size: 18px;
+}
+/*! PAGINA MODALIDADES*/
+/*? AQUI COMIENZA EL CONTENIDO DE MODALIDADES*/
+.contenido .modalidades-explicacion{
+    margin-top: 40px;
+    height: fit-content;
+    margin-left: 40px;
+    width: 90%;
+}
+.cuerpo-del-acordion{
+    display: flex;
+    justify-content: space-evenly;
+}
+.div-acordion{
+    text-align: center;
+}
+.div-acordion2{
+    width: 60%;
+}
+.accordion-button:not(.collapsed) {
+    background-color:#ff7757;
+    color: white;
+
+}
+/*! PAGINA CONTACTO*/
+/*? AQUI COMIENZA EL FORMULARIO*/
+.formulario form{
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background-color: #002e33;
+    padding: 30px;
+    margin: auto;
+}
+.formulario h2{
+    margin-left: 400px;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: underline #ff7757 ;
+}
+.formulario label{
+    width: 20%;
+    font-size: 20px;
+}
+.formulario input{
+    width: 80%;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 2px solid     #ff7757;
+}
+.formulario textarea{
+    font-size: 20px;
+    width: 80%;
+    color: white;
+    border: none;
+    background-color: transparent;
+}
+.formulario #enviar{
+    padding: 10px;
+    background-color: #ff7757;
+}
+
+/*! MEDIA QUERY*/
+@media screen and (max-width:1250px){
+    .hero .hero-div3 h1{
+        font-size: 35px;
+    }
+    .nosotros{
+        justify-content: space-evenly;
+        height: fit-content;
+    }
+    .nosotros .nosotrosdiv2{
+        display: block
+        
+    }
+    .nosotros .nosotrosdiv2 .nosotrosdiv2-img1{
+        display: flex;
+        align-items: normal;
+    }
+    .nosotros .nosotrosdiv2 .nosotrosdiv2-img1 img{
+        height: 250px;
+        width: 250px;
+    }
+    .nosotros .nosotrosdiv2 .nosotrosdiv2-img2 img{
+        height: 250px;
+        width: 250px;
+    }
+}
+@media screen and (max-width:1025px){
+    .nosotrostip{
+        
+    }
+}
+@media screen and (max-width:730px) {
+    .hero-div1 img{
+        width: 50px;
+        height: 50px;
+    }
+    
+}
