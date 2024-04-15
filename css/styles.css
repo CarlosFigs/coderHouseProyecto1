@@ -69,7 +69,7 @@ font-weight: 200;
     "imagen1 imagen1 imagen1 . titulo . texto texto ."
     ". . imagen2 imagen2 imagen2 . texto texto ."
     ". . . . . . . . .";
-    height: 100vh;
+
 }
 .header .color-template{
     background-color: #002e33;
@@ -810,8 +810,6 @@ font-weight: 200;
         "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2 imagen2 . ."
         ". . . . . . . . .";
         height: fit-content;
-    }
-    .template-div3 img{
     }
 }
 @media screen and (max-width:460px){
