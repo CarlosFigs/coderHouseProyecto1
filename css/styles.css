@@ -454,20 +454,34 @@ font-weight: 200;
 .accordion-button:not(.collapsed) {
     background-color:#ff7757;
     color: white;
-
 }
 /*! PAGINA CONTACTO*/
+.mod-template{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) auto;
+    grid-template-rows: auto auto ;
+    grid-template-areas: 
+    "main main nav"
+    "footer footer ."
+    ;
+}
+.template-div5-text h2{
+    font-size: 40px;
+}
+.logo-contacto{
+    width: 150px;
+    height: 150px;
+}
 /*? AQUI COMIENZA EL FORMULARIO*/
 .formulario form{
-    color: white;
-    width: 100%;
-    height: 100vh;
-    background-color: #002e33;
+    justify-content: center;
+    align-items: center;
+    color: #002e33;
+    background-color: white;
     padding: 30px;
-    margin: auto;
 }
 .formulario h2{
-    margin-left: 400px;
+    text-align: center;
     font-size: 40px;
     text-transform: uppercase;
     text-decoration: underline #ff7757 ;
@@ -477,16 +491,16 @@ font-weight: 200;
     font-size: 20px;
 }
 .formulario input{
-    width: 80%;
+    width: 100%;
     font-size: 20px;
     background-color: transparent;
-    color: white;
+    color:  #002e33;
     border: none;
-    border-bottom: 2px solid     #ff7757;
+    border-bottom: 2px solid #ff7757;
 }
 .formulario textarea{
     font-size: 20px;
-    width: 80%;
+    width: 100%;
     color: white;
     border: none;
     background-color: transparent;
@@ -494,6 +508,13 @@ font-weight: 200;
 .formulario #enviar{
     padding: 10px;
     background-color: #ff7757;
+}
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 /*! MEDIA QUERY*/
