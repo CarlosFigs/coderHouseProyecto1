@@ -1,0 +1,17 @@
+{
+  "name": "nuevo-proyecto-fvs",
+  "version": "1.0.0",
+  "description": "Buenas profesor roger.\r Aqui adjunto la entrega del proyecto con las rubicas\r exigidas ademas como en la entraga anterior una mini guia y unas preguntitas. espero pueda responderlas\r y que todo salga excelente.\r Grids/flex-box/box-model:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.0"
+  }
+}
