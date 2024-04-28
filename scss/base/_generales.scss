@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Fira+Sans:wght@200;300;400&display=swap');
+
+*{
+padding: 0;
+margin: 0;
+font-family: "fira sans", serif;
+font-weight: 200;
+}
+/*NAV BAR TODAS LAS PAGINAS */
+.menu{
+    background-color: #ff7757;
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 100vh;
+}
+/* CLASES DE BOOTSTRAP  */
+.btn-position{
+    margin: 5px;
+}
+.color-canvas{
+    background-color: #ff7757;
+}
+.btn-color{
+    background-color:#002e33;
+    color: white;
+}
+.btn-color:hover{
+    background-color: white;
+}
+.btn-color2{
+    background-color: #002e33;
+    color: white;
+}
+.btn-color2:hover{
+    background-color: #ff7757;
+}
+.nav-item-style{
+    border-bottom: #002e33 1px solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.nav-item-style:hover{
+    color: white;
+}
+.cuerpo-del-acordion{
+    display: flex;
+    justify-content: space-evenly;
+}
+.div-acordion{
+    text-align: center;
+}
+.div-acordion2{
+    width: 60%;
+}
+.accordion-button:not(.collapsed) {
+    background-color:#ff7757;
+    color: white;
+}
+.tarjeta ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    font-size: 17px;
+    border-bottom: #002e3357 1px solid;
+}
+.tarjeta img{
+    width: 100% ;
+    height: 100%;
+}

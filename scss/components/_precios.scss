@@ -1,0 +1,184 @@
+.grid-principal{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header header nav"
+        "main main ."
+        "footer footer ."
+    ;
+    .header{
+        grid-area: header;
+        height: fit-content;
+        .template-standar-color {
+            display: grid;
+            background-color: #002e33;
+            color: white;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas:
+                "logo . . . . . . . ."
+                "imagen1 imagen1 imagen1 . titulo . texto texto ."
+                ". . imagen2 imagen2 imagen2 . texto texto ."
+                ". . . . . . . . .";
+
+            .template-div1 {
+                grid-area: logo;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .template-div2 {
+                grid-area: imagen1;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .template-div3 {
+                grid-area: imagen2;
+
+                img {
+                    padding: 2px;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .template-div4 {
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
+                grid-area: texto;
+
+                p {
+                    padding: 5px;
+                    text-align: center;
+                }
+            }
+
+            .template-div5 {
+                grid-area: titulo;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .menu {
+        background-color: #ff7757;
+        grid-area: nav;
+        position: sticky;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        height: 100vh;
+    }
+    
+    .contenido{
+        grid-area: main;
+        .precios-informacion{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 15px;
+        }
+    }
+    .pie {
+        grid-area: footer;
+
+        .contacto {
+            background-color: #002e33;
+            display: flex;
+            height: 100vh;
+
+            .contacto-div-titulo {
+                width: 30%;
+
+                h2 {
+                    font-size: 200px;
+                    border-right: white 2px solid;
+                    border-width: 6px;
+                    height: 100%;
+                    color: white;
+                }
+            }
+
+            .contacto-divs {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 70%;
+
+                .contacto-links {
+                    ul {
+                        list-style: none;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        width: 70%;
+
+                        li {
+                            padding: 10px;
+                            border-bottom: 1px rgb(255, 255, 255) solid;
+
+                            a {
+                                text-decoration: none;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                .contacto-redes {
+                    display: flex;
+                    justify-content: space-around;
+                    text-transform: uppercase;
+
+                    .contacto-redes-ul1 {
+                        list-style: none;
+                        display: flex;
+
+                        li {
+                            padding: 8px;
+                            color: white;
+
+                            a {
+                                text-decoration: none;
+                                color: white;
+
+                                img {
+                                    height: 25px;
+                                    width: 25px;
+                                }
+                            }
+                        }
+                    }
+
+                    .contacto-redes-ul2 {
+                        list-style: none;
+                        display: flex;
+
+                        li {
+                            padding: 8px;
+                            color: white;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: white;
+
+                            img {
+                                height: 50px;
+                                width: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

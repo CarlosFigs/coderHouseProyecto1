@@ -1,0 +1,350 @@
+//header del index
+.grid-principal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header header nav"
+        "main main ."
+        "footer footer ."
+    ;
+
+    .header {
+        grid-area: header;
+        height: fit-content;
+
+        .hero {
+            display: grid;
+            background-color: #002e33;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "logo . . . . video1 video1 video1 ."
+                ". . . . . video1 video1 video1 ."
+                ". titulo titulo titulo titulo titulo titulo titulo ."
+                ". titulo titulo titulo titulo titulo titulo titulo ."
+            ;
+            height: 100vh;
+
+            .hero-div1 {
+                grid-area: logo;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .hero-div2 {
+                grid-area: video1;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .hero-div3 {
+                grid-area: titulo;
+                color: white;
+                text-align: center;
+
+                h1 {
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+
+    .menu {
+        background-color: #ff7757;
+        grid-area: nav;
+        position: sticky;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        height: 100vh;
+    }
+
+    .contenido {
+        grid-area: main;
+
+        .nosotros {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            height: 100vh;
+
+            .nosotrosdiv1 {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 50px;
+                flex-direction: column;
+                margin-top: 40px;
+                margin-left: 30px;
+
+                .nosotrosdiv1-h2 {
+                    text-align: center;
+                    font-size: 30px;
+                }
+
+                .nosotrosdiv1-p {
+                    font-size: 17px;
+                    text-align: center;
+                    width: 300px;
+                    border-left: 0.1px rgba(0, 0, 0, 0.401) solid;
+                }
+            }
+
+            .nosotrosdiv2 {
+                display: flex;
+                flex-wrap: wrap;
+
+                .nosotrosdiv2-img1 {
+                    display: flex;
+                    align-items: end;
+
+                    img {
+                        height: 314px;
+                        width: 350px;
+                    }
+                }
+
+                .nosotrosdiv2-img2 {
+                    img {
+                        height: 314px;
+                        width: 350px;
+                    }
+                }
+            }
+        }
+
+        .nosotrostip {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: black;
+
+            .nosotrostip-div1 {
+                height: 450px;
+                background-image: url(../img/estadisticas.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 70%;
+
+                h3 {
+                    text-align: left;
+                    padding: 10px;
+                    margin-top: 15px;
+                    text-transform: uppercase;
+                    font-size: 23px;
+                }
+
+                p {
+                    padding: 10px;
+                    width: 250px;
+                    font-size: 18px;
+                    text-align: center;
+                    margin-left: 50px;
+                }
+            }
+
+            .nosotrostip-div2 {
+                display: flex;
+                width: 30%;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 70%;
+                    height: 50%;
+                }
+            }
+        }
+
+        .modalidades {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #002e33;
+
+            h2 {
+                padding: 40px;
+                text-align: center;
+                color: white;
+                font-size: 40px;
+            }
+
+            .modalidades-div {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+
+                img {
+                    width: 50%;
+                }
+
+                ul {
+                    padding: 30px;
+                    list-style: none;
+
+                    li {
+                        padding: 10px;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+                        a {
+                            text-decoration: none;
+                            color: white;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .precios {
+            display: flex;
+            height: fit-content;
+            justify-content: space-evenly;
+
+            .precios-div1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h3 {
+                    padding: 20px;
+                    font-size: 30px;
+                    color: black;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            .precios-div2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 60%;
+
+                ul {
+                    list-style: none;
+                    width: 70%;
+                    margin-top: 40px;
+
+                    li {
+                        padding: 10px;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+                        a {
+                            text-decoration: none;
+                            font-size: 17px;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .pie {
+        grid-area: footer;
+
+        .contacto {
+            background-color: #002e33;
+            display: flex;
+            height: 100vh;
+
+            .contacto-div-titulo {
+                width: 30%;
+
+                h2 {
+                    font-size: 200px;
+                    border-right: white 2px solid;
+                    border-width: 6px;
+                    height: 100%;
+                    color: white;
+                }
+            }
+
+            .contacto-divs {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 70%;
+
+                .contacto-links {
+                    ul {
+                        list-style: none;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        width: 70%;
+
+                        li {
+                            padding: 10px;
+                            border-bottom: 1px rgb(255, 255, 255) solid;
+
+                            a {
+                                text-decoration: none;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                .contacto-redes {
+                    display: flex;
+                    justify-content: space-around;
+                    text-transform: uppercase;
+
+                    .contacto-redes-ul1 {
+                        list-style: none;
+                        display: flex;
+
+                        li {
+                            padding: 8px;
+                            color: white;
+
+                            a {
+                                text-decoration: none;
+                                color: white;
+
+                                img {
+                                    height: 25px;
+                                    width: 25px;
+                                }
+                            }
+                        }
+                    }
+
+                    .contacto-redes-ul2 {
+                        list-style: none;
+                        display: flex;
+
+                        li {
+                            padding: 8px;
+                            color: white;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: white;
+
+                            img {
+                                height: 50px;
+                                width: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

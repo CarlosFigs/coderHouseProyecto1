@@ -1,0 +1,320 @@
+@media screen and (max-width:1250px){
+    .hero .hero-div3{
+        margin-top: 20px;
+    }
+    .hero .hero-div3 h1{
+        font-size: 55px;
+    }
+    .nosotros{
+        justify-content: space-evenly;
+        height: fit-content;
+    }
+    .nosotros .nosotrosdiv2{
+        display: block;
+        padding: 10px;
+    }
+    .nosotros .nosotrosdiv2 .nosotrosdiv2-img1 img{
+        height: 250px;
+        width: 250px;
+        padding: 10px;
+    }
+    .nosotros .nosotrosdiv2 .nosotrosdiv2-img2 img{
+        height: 250px;
+        width: 250px;
+        padding: 10px;
+    }
+    .contacto .contacto-div-titulo h2{
+        font-size: 150px;
+    }
+    .template-standar .template-div4 p{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:1025px){
+    .hero .hero-div3{
+        margin-top: 20px;
+    }
+    .nosotros-experiencia-div1 h2{
+        font-size: 30px;
+    }
+    .nosotros-experiencia-div2 p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:950px){
+    .nosotrostip .nosotrostip-div1 p{
+        margin-left: 0;
+    }
+    .contacto .contacto-div-titulo h2{
+        font-size: 130px;
+    }
+    .nosotros-historia .nosotros-historia-div2{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:900px) {
+    .hero{
+        display: grid;
+        background-color: #002e33;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "logo logo . video1 video1 video1 video1 . ."
+        ". . . video1 video1 video1 video1 . ."
+        ". titulo titulo titulo titulo titulo titulo titulo ."
+        ". titulo titulo titulo titulo titulo titulo titulo ."
+        ;
+        height: 100vh;
+    }
+    .nosotros{
+        align-items: center;
+    }
+    .nosotros .nosotrosdiv2 .nosotrosdiv2-img1 img{
+        height: 200px;
+        width: 200px;
+    }
+    .nosotros .nosotrosdiv2 .nosotrosdiv2-img2 img{
+        height: 200px;
+        width: 200px;
+    }
+    .modalidades h2{
+        padding: 40px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+    .template-standar{
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows:repeat(4, auto);
+        grid-template-areas: 
+        "logo . . . . . . . ."
+        "imagen1 imagen1 imagen1 . titulo . texto texto texto"
+        ". imagen2 imagen2 imagen2 imagen2 . texto texto texto"
+        ". . . . . . . . .";
+    }
+    .template-standar .template-div4 p{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:830px){
+    .nosotrostip .nosotrostip-div1 {
+        background-image: none;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .nosotrostip .nosotrostip-div1 h3{
+        text-align: center;
+    }
+    .nosotrostip .nosotrostip-div2 img{
+        height: 80%;
+    }
+    .modalidades .modalidades-div{
+        align-items: center;
+    }
+    .modalidades .modalidades-div img{
+        width: 40%;
+        height: 70%;
+    }
+    .contacto{
+        height: fit-content;
+    }
+    .contacto .contacto-divs .contacto-redes ul li{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:800px){
+    .hero .hero-div3{
+        margin-top: 50px;
+    }
+    .hero .hero-div3 h1{
+        font-size: 40px;
+    }
+    .contacto .contacto-div-titulo h2{
+        font-size: 100px;
+    }
+    .nosotros-historia .nosotros-historia-div2{
+        font-size: 14px;
+        width: fit-content;
+    }
+    .nosotros-experiencia-div1 h2{
+        font-size: 20px;
+    }
+    .nosotros-experiencia-div2 p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:750px){
+    .contacto .contacto-divs .contacto-redes{
+        justify-content: center;
+        align-items: center;
+    }
+    .contacto .contacto-divs .contacto-redes-ul1 img{
+        height: 15px;
+        width: 15px;
+    }
+    .contacto .contacto-divs .contacto-redes-ul2 img{
+        height: 30px;
+        width: 30px;
+
+    }
+    .contacto .contacto-divs .contacto-redes ul li{
+        font-size: 10px;
+    }
+    .template-standar{
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows:repeat(4, auto);
+        grid-template-areas: 
+        "logo logo . . . . . . ."
+        "imagen1 imagen1 imagen1 . titulo . texto texto texto"
+        "imagen2 imagen2 imagen2 imagen2 imagen2 . texto texto texto"
+        ". . . . . . . . .";
+    }
+    .template-standar .template-div2 {
+        display: none;
+    }
+}
+@media screen and (max-width:725px) {
+    .hero{
+        display: grid;
+        background-color: #002e33;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "logo logo . video1 video1 video1 video1 . ."
+        ". . . video1 video1 video1 video1 . ."
+        ". . titulo titulo titulo titulo titulo . ."
+        ". . titulo titulo titulo titulo titulo . ."
+        ;
+        height: fit-content;
+    }
+    .hero .hero-div3 h1{
+        font-size: 30px;
+    }
+    .nosotros .nosotrosdiv1{
+        margin-top: 0;
+        margin-left: 0;
+        padding: 5px;
+    }
+    .nosotros .nosotrosdiv1 .nosotrosdiv1-h2{
+        font-size:20px ;
+    }
+    .nosotros .nosotrosdiv1 .nosotrosdiv1-p{
+        font-size: 14px;
+    }
+    .nosotros .nosotrosdiv2 .nosotrosdiv2-img2{
+        display: none;
+    }
+    .contacto .contacto-divs .contacto-links ul{
+        margin-left: 25px;
+        margin-top: 25px;
+    }
+}
+@media screen and (max-width:680px){
+    .nosotrostip .nosotrostip-div2 img{
+        width: 80%;
+        height: 80%;
+    }
+    .modalidades{
+        height: fit-content;
+    }
+    .modalidades h2{
+        padding: 20px;
+        font-size: 20px;
+    }
+    .template-standar{
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows:repeat(4, auto);
+        grid-template-areas: 
+        "logo logo . . . . . . ."
+        ". . titulo texto texto texto texto texto texto"
+        "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2 . . ."
+        ". . . . . . . . .";
+}
+@media screen and (max-width:630px){
+    .nosotros{
+        flex-wrap: wrap;
+    }
+    .hero .hero-div3 h1{
+        font-size: 20px;
+    }
+    .precios .precios-div2 ul{
+        width: 100%;
+        margin-top: 0;
+    }
+    .contacto .contacto-div-titulo h2{
+        font-size: 80px;
+    }
+    .contacto .contacto-redes .contacto-redes-ul1{
+        margin-bottom: 0;
+    }
+    .contacto .contacto-redes .contacto-redes-ul2{
+        margin-bottom: 0;
+    }
+    .nosotros-historia .nosotros-historia-div1{
+        display: none;
+    }
+    .nosotros-historia .nosotros-historia-div2 p{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:560px) {
+    .template-standar{
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows:repeat(4, auto);
+        grid-template-areas: 
+        "logo logo . . . . . . ."
+        ". . titulo . texto texto texto texto texto"
+        "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2 . . ."
+        ". . . . . . . . .";
+    }
+    .nosotros-experiencia-div2{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:520px){
+    .nosotrostip .nosotrostip-div1{
+        width: 100%;
+    }
+    .nosotrostip .nosotrostip-div2 {
+        display: none;
+    }
+    .contacto .contacto-div-titulo h2{
+        font-size: 60px;
+    }
+    .contacto .contacto-divs .contacto-redes{
+        display: none;
+    }
+}
+@media screen and (max-width:480px){
+    .modalidades h2{
+        font-size: 15px;
+    }
+    .precios .precios-div1 h3{
+        font-size: 20px;
+    }
+    .template-standar{
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows:repeat(4, auto);
+        grid-template-areas: 
+        "logo logo . . titulo . . . ."
+        ". . texto texto texto texto texto texto texto"
+        "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2 imagen2 . ."
+        ". . . . . . . . .";
+        height: fit-content;
+    }
+}
+@media screen and (max-width:460px){
+    .contacto .contacto-div-titulo h2{
+        font-size: 40px;
+    }
+}
+}
