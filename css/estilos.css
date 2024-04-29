@@ -1,10 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Fira+Sans:wght@200;300;400&display=swap");
+.grid-principal .contenido .nosotrostip .nosotrostip-div2, .grid-principal .contenido .precios .precios-div2, .grid-principal .contenido .nosotros-historia .nosotros-historia-div1, .mod-template .contenido .direccion .ubicacion {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.grid-principal .contenido .precios .precios-div2 ul li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  transition-duration: 1s;
+  transition-property: border-bottom-color; }
+
+.grid-principal .contenido .modalidades .modalidades-div ul li, .grid-principal .pie .contacto .contacto-divs .contacto-links ul li, .mod-template .pie .contacto .contacto-divs .contacto-links ul li {
+  padding: 10px;
+  border-bottom: 1px white solid;
+  transition-duration: 1s;
+  transition-property: border-bottom-color; }
+
 * {
   padding: 0;
   margin: 0;
   font-family: "fira sans", serif;
   font-weight: 200; }
+
+*::selection {
+  background-color: #ff7757;
+  color: white; }
 
 /*NAV BAR TODAS LAS PAGINAS */
 .menu {
@@ -25,13 +46,17 @@
 
 .btn-color {
   background-color: #002e33;
-  color: white; }
+  color: white;
+  transition-property: background-color;
+  transition-duration: 0.5s; }
 
 .btn-color:hover {
   background-color: white; }
 
 .btn-color2 {
   background-color: #002e33;
+  transition-property: background-color;
+  transition-duration: 0.5s;
   color: white; }
 
 .btn-color2:hover {
@@ -40,7 +65,9 @@
 .nav-item-style {
   border-bottom: #002e33 1px solid;
   margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  transition-duration: 0.5s;
+  transition-property: color; }
 
 .nav-item-style:hover {
   color: white; }
@@ -58,6 +85,15 @@
 .accordion-button:not(.collapsed) {
   background-color: #ff7757;
   color: white; }
+
+.trajeta {
+  transition: 1s; }
+
+.tarjeta:hover {
+  box-shadow: -1px 10px 42px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 10px 42px -7px rgba(0, 0, 0, 0.75);
+  -moz-boz-shadow: -1px 10px 42px -7px rgba(0, 0, 0, 0.75);
+  transform: scale(1.05); }
 
 .tarjeta ul {
   display: flex;
@@ -83,7 +119,7 @@
       background-color: #002e33;
       grid-template-columns: repeat(9, 1fr);
       grid-template-rows: repeat(4, 1fr);
-      grid-template-areas: "logo . . . . video1 video1 video1 ." ". . . . . video1 video1 video1 ." ". titulo titulo titulo titulo titulo titulo titulo ." ". titulo titulo titulo titulo titulo titulo titulo .";
+      grid-template-areas: "logo . . . video1 video1 video1 video1 ." ". . . . video1 video1 video1 video1 ." ". titulo titulo titulo titulo titulo titulo titulo ." ". titulo titulo titulo titulo titulo titulo titulo .";
       height: 100vh; }
       .grid-principal .header .hero .hero-div1 {
         grid-area: logo; }
@@ -102,25 +138,22 @@
         .grid-principal .header .hero .hero-div3 h1 {
           font-size: 80px; }
   .grid-principal .menu {
-    background-color: #ff7757;
-    grid-area: nav;
-    position: sticky;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    height: 100vh; }
+    grid-area: nav; }
   .grid-principal .contenido {
     grid-area: main; }
     .grid-principal .contenido .nosotros {
       display: flex;
       justify-content: space-between;
-      color: black;
+      flex-direction: row;
+      align-items: normal;
       height: 100vh; }
       .grid-principal .contenido .nosotros .nosotrosdiv1 {
         display: flex;
+        justify-content: normal;
+        flex-direction: column;
+        align-items: normal;
         flex-wrap: wrap;
         padding: 50px;
-        flex-direction: column;
         margin-top: 40px;
         margin-left: 30px; }
         .grid-principal .contenido .nosotros .nosotrosdiv1 .nosotrosdiv1-h2 {
@@ -145,9 +178,10 @@
           width: 350px; }
     .grid-principal .contenido .nosotrostip {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      color: black; }
+      flex-direction: normal;
+      align-items: normal;
+      flex-wrap: wrap; }
       .grid-principal .contenido .nosotrostip .nosotrostip-div1 {
         height: 450px;
         background-image: url(../img/estadisticas.jpg);
@@ -168,16 +202,15 @@
           text-align: center;
           margin-left: 50px; }
       .grid-principal .contenido .nosotrostip .nosotrostip-div2 {
-        display: flex;
-        width: 30%;
-        align-items: center;
-        justify-content: center; }
+        width: 30%; }
         .grid-principal .contenido .nosotrostip .nosotrostip-div2 img {
           width: 70%;
           height: 50%; }
     .grid-principal .contenido .modalidades {
       display: flex;
+      justify-content: normal;
       flex-direction: column;
+      align-items: normal;
       height: 100vh;
       background-color: #002e33; }
       .grid-principal .contenido .modalidades h2 {
@@ -188,50 +221,55 @@
       .grid-principal .contenido .modalidades .modalidades-div {
         display: flex;
         justify-content: space-evenly;
+        flex-direction: normal;
+        align-items: normal;
         flex-wrap: wrap; }
         .grid-principal .contenido .modalidades .modalidades-div img {
           width: 50%; }
         .grid-principal .contenido .modalidades .modalidades-div ul {
           padding: 30px;
           list-style: none; }
-          .grid-principal .contenido .modalidades .modalidades-div ul li {
-            padding: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
-            .grid-principal .contenido .modalidades .modalidades-div ul li a {
-              text-decoration: none;
-              color: white;
-              font-size: 20px; }
+          .grid-principal .contenido .modalidades .modalidades-div ul li:hover {
+            border-bottom-color: #ff7757; }
+          .grid-principal .contenido .modalidades .modalidades-div ul li a {
+            text-decoration: none;
+            color: white;
+            transition-duration: 1s;
+            transition-property: color;
+            font-size: 20px; }
+            .grid-principal .contenido .modalidades .modalidades-div ul li a:hover {
+              color: #ff7757; }
     .grid-principal .contenido .precios {
       display: flex;
       height: fit-content;
       justify-content: space-evenly; }
       .grid-principal .contenido .precios .precios-div1 {
         display: flex;
+        justify-content: center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center; }
+        align-items: center; }
         .grid-principal .contenido .precios .precios-div1 h3 {
           padding: 20px;
           font-size: 30px;
-          color: black; }
+          color: #002e33; }
         .grid-principal .contenido .precios .precios-div1 a {
           text-decoration: none; }
       .grid-principal .contenido .precios .precios-div2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 60%; }
         .grid-principal .contenido .precios .precios-div2 ul {
           list-style: none;
           width: 70%;
           margin-top: 40px; }
-          .grid-principal .contenido .precios .precios-div2 ul li {
-            padding: 10px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
-            .grid-principal .contenido .precios .precios-div2 ul li a {
-              text-decoration: none;
-              font-size: 17px;
-              color: black; }
+          .grid-principal .contenido .precios .precios-div2 ul li:hover {
+            border-bottom-color: #ff7757; }
+          .grid-principal .contenido .precios .precios-div2 ul li a {
+            text-decoration: none;
+            color: #002e33;
+            transition-duration: 1s;
+            transition-property: color;
+            font-size: 17px; }
+            .grid-principal .contenido .precios .precios-div2 ul li a:hover {
+              color: #ff7757; }
   .grid-principal .pie {
     grid-area: footer; }
     .grid-principal .pie .contacto {
@@ -256,12 +294,15 @@
           margin-left: 50px;
           margin-top: 50px;
           width: 70%; }
-          .grid-principal .pie .contacto .contacto-divs .contacto-links ul li {
-            padding: 10px;
-            border-bottom: 1px white solid; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-links ul li a {
-              text-decoration: none;
-              color: white; }
+          .grid-principal .pie .contacto .contacto-divs .contacto-links ul li:hover {
+            border-bottom-color: #ff7757; }
+          .grid-principal .pie .contacto .contacto-divs .contacto-links ul li a {
+            text-decoration: none;
+            color: white;
+            transition-duration: 1s;
+            transition-property: color; }
+            .grid-principal .pie .contacto .contacto-divs .contacto-links ul li a:hover {
+              color: #ff7757; }
         .grid-principal .pie .contacto .contacto-divs .contacto-redes {
           display: flex;
           justify-content: space-around;
@@ -335,13 +376,7 @@
         display: flex;
         align-items: center; }
   .grid-principal .menu {
-    background-color: #ff7757;
-    grid-area: nav;
-    position: sticky;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    height: 100vh; }
+    grid-area: nav; }
   .grid-principal .contenido {
     grid-area: main; }
     .grid-principal .contenido .precios-informacion {
@@ -351,62 +386,6 @@
       padding: 15px; }
   .grid-principal .pie {
     grid-area: footer; }
-    .grid-principal .pie .contacto {
-      background-color: #002e33;
-      display: flex;
-      height: 100vh; }
-      .grid-principal .pie .contacto .contacto-div-titulo {
-        width: 30%; }
-        .grid-principal .pie .contacto .contacto-div-titulo h2 {
-          font-size: 200px;
-          border-right: white 2px solid;
-          border-width: 6px;
-          height: 100%;
-          color: white; }
-      .grid-principal .pie .contacto .contacto-divs {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 70%; }
-        .grid-principal .pie .contacto .contacto-divs .contacto-links ul {
-          list-style: none;
-          margin-left: 50px;
-          margin-top: 50px;
-          width: 70%; }
-          .grid-principal .pie .contacto .contacto-divs .contacto-links ul li {
-            padding: 10px;
-            border-bottom: 1px white solid; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-links ul li a {
-              text-decoration: none;
-              color: white; }
-        .grid-principal .pie .contacto .contacto-divs .contacto-redes {
-          display: flex;
-          justify-content: space-around;
-          text-transform: uppercase; }
-          .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 {
-            list-style: none;
-            display: flex; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 li {
-              padding: 8px;
-              color: white; }
-              .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 li a {
-                text-decoration: none;
-                color: white; }
-                .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 li a img {
-                  height: 25px;
-                  width: 25px; }
-          .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 {
-            list-style: none;
-            display: flex; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 li {
-              padding: 8px;
-              color: white; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 a {
-              text-decoration: none;
-              color: white; }
-              .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 a img {
-                height: 50px;
-                width: 50px; }
 
 .grid-principal {
   display: grid;
@@ -452,13 +431,7 @@
         display: flex;
         align-items: center; }
   .grid-principal .menu {
-    grid-area: nav;
-    background-color: #ff7757;
-    position: sticky;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    height: 100vh; }
+    grid-area: nav; }
   .grid-principal .contenido {
     grid-area: main; }
     .grid-principal .contenido .modalidades-explicacion {
@@ -468,62 +441,6 @@
       width: 90%; }
   .grid-principal .pie {
     grid-area: footer; }
-    .grid-principal .pie .contacto {
-      background-color: #002e33;
-      display: flex;
-      height: 100vh; }
-      .grid-principal .pie .contacto .contacto-div-titulo {
-        width: 30%; }
-        .grid-principal .pie .contacto .contacto-div-titulo h2 {
-          font-size: 200px;
-          border-right: white 2px solid;
-          border-width: 6px;
-          height: 100%;
-          color: white; }
-      .grid-principal .pie .contacto .contacto-divs {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 70%; }
-        .grid-principal .pie .contacto .contacto-divs .contacto-links ul {
-          list-style: none;
-          margin-left: 50px;
-          margin-top: 50px;
-          width: 70%; }
-          .grid-principal .pie .contacto .contacto-divs .contacto-links ul li {
-            padding: 10px;
-            border-bottom: 1px white solid; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-links ul li a {
-              text-decoration: none;
-              color: white; }
-        .grid-principal .pie .contacto .contacto-divs .contacto-redes {
-          display: flex;
-          justify-content: space-around;
-          text-transform: uppercase; }
-          .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 {
-            list-style: none;
-            display: flex; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 li {
-              padding: 8px;
-              color: white; }
-              .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 li a {
-                text-decoration: none;
-                color: white; }
-                .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 li a img {
-                  height: 25px;
-                  width: 25px; }
-          .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 {
-            list-style: none;
-            display: flex; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 li {
-              padding: 8px;
-              color: white; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 a {
-              text-decoration: none;
-              color: white; }
-              .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 a img {
-                height: 50px;
-                width: 50px; }
 
 .grid-principal {
   display: grid;
@@ -567,27 +484,19 @@
         display: flex;
         align-items: center; }
   .grid-principal .menu {
-    background-color: #ff7757;
-    grid-area: nav;
-    position: sticky;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    height: 100vh; }
+    grid-area: nav; }
   .grid-principal .contenido {
     grid-area: main; }
     .grid-principal .contenido .nosotros-historia {
       background-color: #002e33;
       display: flex;
+      justify-content: normal;
       flex-direction: row-reverse;
-      height: 100vh;
-      align-items: center; }
-      .grid-principal .contenido .nosotros-historia .nosotros-historia-div1 {
-        display: flex;
-        justify-content: center; }
-        .grid-principal .contenido .nosotros-historia .nosotros-historia-div1 img {
-          padding: 10px;
-          width: 100%; }
+      align-items: center;
+      height: 100vh; }
+      .grid-principal .contenido .nosotros-historia .nosotros-historia-div1 img {
+        padding: 10px;
+        width: 100%; }
       .grid-principal .contenido .nosotros-historia .nosotros-historia-div2 {
         text-align: center;
         color: white;
@@ -595,6 +504,7 @@
         width: 50%; }
     .grid-principal .contenido .nosotros-experiencia {
       display: flex;
+      justify-content: normal;
       flex-direction: column;
       align-items: center;
       height: fit-content; }
@@ -607,6 +517,7 @@
       .grid-principal .contenido .nosotros-experiencia .nosotros-experiencia-div2 {
         display: flex;
         justify-content: space-evenly;
+        flex-direction: normal;
         align-items: center; }
         .grid-principal .contenido .nosotros-experiencia .nosotros-experiencia-div2 p {
           text-align: center;
@@ -614,62 +525,6 @@
           font-size: 18px; }
   .grid-principal .pie {
     grid-area: footer; }
-    .grid-principal .pie .contacto {
-      background-color: #002e33;
-      display: flex;
-      height: 100vh; }
-      .grid-principal .pie .contacto .contacto-div-titulo {
-        width: 30%; }
-        .grid-principal .pie .contacto .contacto-div-titulo h2 {
-          font-size: 200px;
-          border-right: white 2px solid;
-          border-width: 6px;
-          height: 100%;
-          color: white; }
-      .grid-principal .pie .contacto .contacto-divs {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 70%; }
-        .grid-principal .pie .contacto .contacto-divs .contacto-links ul {
-          list-style: none;
-          margin-left: 50px;
-          margin-top: 50px;
-          width: 70%; }
-          .grid-principal .pie .contacto .contacto-divs .contacto-links ul li {
-            padding: 10px;
-            border-bottom: 1px white solid; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-links ul li a {
-              text-decoration: none;
-              color: white; }
-        .grid-principal .pie .contacto .contacto-divs .contacto-redes {
-          display: flex;
-          justify-content: space-around;
-          text-transform: uppercase; }
-          .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 {
-            list-style: none;
-            display: flex; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 li {
-              padding: 8px;
-              color: white; }
-              .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 li a {
-                text-decoration: none;
-                color: white; }
-                .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 li a img {
-                  height: 25px;
-                  width: 25px; }
-          .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 {
-            list-style: none;
-            display: flex; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 li {
-              padding: 8px;
-              color: white; }
-            .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 a {
-              text-decoration: none;
-              color: white; }
-              .grid-principal .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul2 a img {
-                height: 50px;
-                width: 50px; }
 
 .mod-template {
   display: grid;
@@ -677,13 +532,7 @@
   grid-template-rows: auto auto;
   grid-template-areas: "main main nav" "footer footer ."; }
   .mod-template .menu {
-    background-color: #ff7757;
-    grid-area: nav;
-    position: sticky;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    height: 100vh; }
+    grid-area: nav; }
   .mod-template .contenido {
     grid-area: main; }
     .mod-template .contenido .logo-contacto {
@@ -721,10 +570,7 @@
       padding: 10px;
       background-color: #ff7757; }
     .mod-template .contenido .direccion .ubicacion {
-      display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       padding: 10px; }
   .mod-template .pie {
     grid-area: footer; }
@@ -742,23 +588,29 @@
           color: white; }
       .mod-template .pie .contacto .contacto-divs {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
+        flex-direction: column;
+        align-items: normal;
         width: 70%; }
         .mod-template .pie .contacto .contacto-divs .contacto-links ul {
           list-style: none;
           margin-left: 50px;
           margin-top: 50px;
           width: 70%; }
-          .mod-template .pie .contacto .contacto-divs .contacto-links ul li {
-            padding: 10px;
-            border-bottom: 1px white solid; }
-            .mod-template .pie .contacto .contacto-divs .contacto-links ul li a {
-              text-decoration: none;
-              color: white; }
+          .mod-template .pie .contacto .contacto-divs .contacto-links ul li:hover {
+            border-bottom-color: #ff7757; }
+          .mod-template .pie .contacto .contacto-divs .contacto-links ul li a {
+            text-decoration: none;
+            color: white;
+            transition-duration: 1s;
+            transition-property: color; }
+            .mod-template .pie .contacto .contacto-divs .contacto-links ul li a:hover {
+              color: #ff7757; }
         .mod-template .pie .contacto .contacto-divs .contacto-redes {
           display: flex;
           justify-content: space-around;
+          flex-direction: normal;
+          align-items: normal;
           text-transform: uppercase; }
           .mod-template .pie .contacto .contacto-divs .contacto-redes .contacto-redes-ul1 {
             list-style: none;

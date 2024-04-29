@@ -7,13 +7,7 @@
     "footer footer ."
     ;
     .menu {
-        background-color: #ff7757;
         grid-area: nav;
-        position: sticky;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        height: 100vh;
     }
     .contenido{
         grid-area: main;
@@ -25,15 +19,15 @@
             form{
                 justify-content: center;
                 align-items: center;
-                color: #002e33;
-                background-color: white;
+                color: $color-principal;
+                background-color: $color-terciario;
                 padding: 30px;
             }
             h2{
                 text-align: center;
                 font-size: 40px;
                 text-transform: uppercase;
-                text-decoration: underline #ff7757 ; 
+                text-decoration: underline $color-secundario ; 
             }
             label{
                 width: 20%;
@@ -43,29 +37,27 @@
                 width: 100%;
                 font-size: 20px;
                 background-color: transparent;
-                color:  #002e33;
+                color:  $color-principal;
                 border: none;
-                border-bottom: 2px solid #ff7757;
+                border-bottom: 2px solid $color-secundario;
             }
             textarea{
                 font-size: 20px;
                 width: 100%;
-                color:#002e33;
+                color:$color-principal;
                 border: none;
                 background-color: transparent;
                 height: 70px;
             }
             #enviar{
                 padding: 10px;
-                background-color: #ff7757;
+                background-color: $color-secundario;
             }
         }
         .direccion{
             .ubicacion{
-                display: flex;
+                @extend %display-flex-center;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 padding: 10px;
             }
         }
@@ -75,7 +67,7 @@
         grid-area: footer;
 
         .contacto {
-            background-color: #002e33;
+            background-color: $color-principal;
             display: flex;
             height: 100vh;
 
@@ -84,17 +76,15 @@
 
                 h2 {
                     font-size: 200px;
-                    border-right: white 2px solid;
+                    border-right: $color-terciario 2px solid;
                     border-width: 6px;
                     height: 100%;
-                    color: white;
+                    color: $color-terciario;
                 }
             }
 
             .contacto-divs {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                @include flex(flex,space-between,column,normal);
                 width: 70%;
 
                 .contacto-links {
@@ -105,33 +95,34 @@
                         width: 70%;
 
                         li {
-                            padding: 10px;
-                            border-bottom: 1px rgb(255, 255, 255) solid;
-
+                            @extend %li-white;
+                            &:hover{
+                                border-bottom-color: $color-secundario;
+                            }
                             a {
-                                text-decoration: none;
-                                color: white;
+                                @include ahover(none,$color-terciario,1s,color);
+                                &:hover{
+                                    color: $color-secundario;
+                                }
                             }
                         }
                     }
                 }
 
                 .contacto-redes {
-                    display: flex;
-                    justify-content: space-around;
+                    @include flex(flex,space-around,normal,normal);
                     text-transform: uppercase;
-
                     .contacto-redes-ul1 {
                         list-style: none;
                         display: flex;
 
                         li {
                             padding: 8px;
-                            color: white;
+                            color: $color-terciario;
 
                             a {
                                 text-decoration: none;
-                                color: white;
+                                color: $color-terciario;
 
                                 img {
                                     height: 25px;
@@ -147,12 +138,12 @@
 
                         li {
                             padding: 8px;
-                            color: white;
+                            color: $color-terciario;
                         }
 
                         a {
                             text-decoration: none;
-                            color: white;
+                            color: $color-terciario;
 
                             img {
                                 height: 50px;

@@ -67,25 +67,16 @@
         }
     }
     .menu {
-        background-color: #ff7757;
         grid-area: nav;
-        position: sticky;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        height: 100vh;
     }
     .contenido{
         grid-area: main;
         .nosotros-historia{
-            background-color: #002e33;
-            display: flex;
-            flex-direction: row-reverse;
+            background-color: $color-principal;
+            @include flex(flex,normal,row-reverse,center);
             height: 100vh;
-            align-items: center;
             .nosotros-historia-div1{
-                display: flex;
-                justify-content: center;
+                @extend %display-flex-center;
                 img{
                     padding: 10px;
                     width: 100%;
@@ -93,15 +84,13 @@
             }
             .nosotros-historia-div2{
                 text-align: center;
-                color: white;
+                color: $color-terciario;
                 font-size: 17px;
                 width: 50%;
             }
         }
         .nosotros-experiencia{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex(flex,normal,column,center);
             height: fit-content;
             .nosotros-experiencia-div1{
                 width: 70%;
@@ -112,9 +101,7 @@
                 }
             }
             .nosotros-experiencia-div2{
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
+                @include flex(flex,space-evenly,normal,center);
                 p{
                     text-align: center;
                     padding: 10px;
@@ -126,95 +113,5 @@
     .pie {
         grid-area: footer;
 
-        .contacto {
-            background-color: #002e33;
-            display: flex;
-            height: 100vh;
-
-            .contacto-div-titulo {
-                width: 30%;
-
-                h2 {
-                    font-size: 200px;
-                    border-right: white 2px solid;
-                    border-width: 6px;
-                    height: 100%;
-                    color: white;
-                }
-            }
-
-            .contacto-divs {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 70%;
-
-                .contacto-links {
-                    ul {
-                        list-style: none;
-                        margin-left: 50px;
-                        margin-top: 50px;
-                        width: 70%;
-
-                        li {
-                            padding: 10px;
-                            border-bottom: 1px rgb(255, 255, 255) solid;
-
-                            a {
-                                text-decoration: none;
-                                color: white;
-                            }
-                        }
-                    }
-                }
-
-                .contacto-redes {
-                    display: flex;
-                    justify-content: space-around;
-                    text-transform: uppercase;
-
-                    .contacto-redes-ul1 {
-                        list-style: none;
-                        display: flex;
-
-                        li {
-                            padding: 8px;
-                            color: white;
-
-                            a {
-                                text-decoration: none;
-                                color: white;
-
-                                img {
-                                    height: 25px;
-                                    width: 25px;
-                                }
-                            }
-                        }
-                    }
-
-                    .contacto-redes-ul2 {
-                        list-style: none;
-                        display: flex;
-
-                        li {
-                            padding: 8px;
-                            color: white;
-                        }
-
-                        a {
-                            text-decoration: none;
-                            color: white;
-
-                            img {
-                                height: 50px;
-                                width: 50px;
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
     }
 }

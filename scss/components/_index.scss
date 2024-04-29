@@ -15,12 +15,12 @@
 
         .hero {
             display: grid;
-            background-color: #002e33;
+            background-color: nth($colores , 1 );
             grid-template-columns: repeat(9, 1fr);
             grid-template-rows: repeat(4, 1fr);
             grid-template-areas:
-                "logo . . . . video1 video1 video1 ."
-                ". . . . . video1 video1 video1 ."
+                "logo . . . video1 video1 video1 video1 ."
+                ". . . . video1 video1 video1 video1 ."
                 ". titulo titulo titulo titulo titulo titulo titulo ."
                 ". titulo titulo titulo titulo titulo titulo titulo ."
             ;
@@ -46,7 +46,7 @@
 
             .hero-div3 {
                 grid-area: titulo;
-                color: white;
+                color: $color-terciario;
                 text-align: center;
 
                 h1 {
@@ -57,29 +57,20 @@
     }
 
     .menu {
-        background-color: #ff7757;
         grid-area: nav;
-        position: sticky;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        height: 100vh;
     }
 
     .contenido {
         grid-area: main;
 
         .nosotros {
-            display: flex;
-            justify-content: space-between;
-            color: black;
+            @include flex(flex,space-between,row,normal);
             height: 100vh;
 
             .nosotrosdiv1 {
-                display: flex;
+                @include flex(flex,normal,column,normal);
                 flex-wrap: wrap;
                 padding: 50px;
-                flex-direction: column;
                 margin-top: 40px;
                 margin-left: 30px;
 
@@ -120,10 +111,8 @@
         }
 
         .nosotrostip {
-            display: flex;
+            @include flex(flex,space-between,normal,normal);
             flex-wrap: wrap;
-            justify-content: space-between;
-            color: black;
 
             .nosotrostip-div1 {
                 height: 450px;
@@ -151,34 +140,29 @@
             }
 
             .nosotrostip-div2 {
-                display: flex;
+                @extend %display-flex-center;
                 width: 30%;
-                align-items: center;
-                justify-content: center;
-
                 img {
-                    width: 70%;
-                    height: 50%;
+                width: 70%;
+                height: 50%;
                 }
             }
         }
 
         .modalidades {
-            display: flex;
-            flex-direction: column;
+            @include flex(flex,normal,column,normal);
             height: 100vh;
             background-color: #002e33;
 
             h2 {
                 padding: 40px;
                 text-align: center;
-                color: white;
+                color:$color-terciario;
                 font-size: 40px;
             }
 
             .modalidades-div {
-                display: flex;
-                justify-content: space-evenly;
+                @include flex(flex,space-evenly,normal,normal);
                 flex-wrap: wrap;
 
                 img {
@@ -190,13 +174,17 @@
                     list-style: none;
 
                     li {
-                        padding: 10px;
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                        @extend %li-white;
+                        &:hover{
+                            border-bottom-color: $color-secundario;
+                        }
 
                         a {
-                            text-decoration: none;
-                            color: white;
+                            @include ahover(none,$color-terciario,1s,color);
                             font-size: 20px;
+                            &:hover{
+                                color: $color-secundario;
+                            }
                         }
                     }
                 }
@@ -210,15 +198,11 @@
             justify-content: space-evenly;
 
             .precios-div1 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
+                @include flex(flex,center,column,center);
                 h3 {
                     padding: 20px;
                     font-size: 30px;
-                    color: black;
+                    color: $color-principal;
                 }
 
                 a {
@@ -227,9 +211,7 @@
             }
 
             .precios-div2 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                @extend %display-flex-center;
                 width: 60%;
 
                 ul {
@@ -238,13 +220,17 @@
                     margin-top: 40px;
 
                     li {
-                        padding: 10px;
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+                        @extend %li-dark;
+                        &:hover{
+                            border-bottom-color:$color-secundario;
+                        }
 
                         a {
-                            text-decoration: none;
+                            @include ahover(none,$color-principal,1s,color);
                             font-size: 17px;
-                            color: black;
+                            &:hover{
+                                color:$color-secundario;
+                            }
                         }
                     }
                 }
@@ -257,16 +243,15 @@
         grid-area: footer;
 
         .contacto {
-            background-color: #002e33;
+            background-color: $color-principal;
             display: flex;
             height: 100vh;
-
             .contacto-div-titulo {
                 width: 30%;
 
                 h2 {
                     font-size: 200px;
-                    border-right: white 2px solid;
+                    border-right: $color-terciario 2px solid;
                     border-width: 6px;
                     height: 100%;
                     color: white;
@@ -287,12 +272,16 @@
                         width: 70%;
 
                         li {
-                            padding: 10px;
-                            border-bottom: 1px rgb(255, 255, 255) solid;
+                            @extend %li-white;
+                            &:hover{
+                                border-bottom-color: $color-secundario;
+                            }
 
                             a {
-                                text-decoration: none;
-                                color: white;
+                                @include ahover(none,$color-terciario,1s,color);
+                                &:hover{
+                                    color: $color-secundario;
+                                }
                             }
                         }
                     }

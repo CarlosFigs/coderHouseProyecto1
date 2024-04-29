@@ -1,0 +1,66 @@
+//! variables senicllas
+$color-principal: #002e33;
+$color-secundario:#ff7757;
+$color-terciario:white;
+
+
+//! listas
+$colores:
+#002e33,//1
+#ff7757,//2
+white;//3
+
+$font-size:
+10px,//1
+12px,//2
+13px,//3
+14px,//4
+15px,//5
+17px,//6
+18px,//7
+20px,//8
+23px,//9
+30px,//10
+40px,//11
+55px,//12
+60px,//13
+80px,//14
+100px,//15
+130px,//16
+150px,//17
+200px,//18
+;
+ //!EXTENDS
+%display-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%li-dark{
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    transition-duration: 1s;
+    transition-property: border-bottom-color;
+}
+%li-white{
+    padding: 10px;
+    border-bottom: 1px rgb(255, 255, 255) solid;
+    transition-duration: 1s;
+    transition-property: border-bottom-color;
+}
+
+
+//!MIXINS
+@mixin flex($flex, $justify, $direction, $aling){
+    display: $flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+    align-items: $aling;
+}
+@mixin ahover($textdeco,$color,$transitionD,$transitionP){
+    text-decoration: $textdeco;
+    color: $color;
+    transition-duration: $transitionD;
+    transition-property: $transitionP;
+}
+

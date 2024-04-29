@@ -7,9 +7,13 @@ margin: 0;
 font-family: "fira sans", serif;
 font-weight: 200;
 }
+*::selection{
+    background-color: nth($colores, 2 );
+    color: nth($colores,3 );
+}
 /*NAV BAR TODAS LAS PAGINAS */
 .menu{
-    background-color: #ff7757;
+    background-color: nth($colores, 2 );
     grid-area: nav;
     position: sticky;
     top: 0;
@@ -22,29 +26,35 @@ font-weight: 200;
     margin: 5px;
 }
 .color-canvas{
-    background-color: #ff7757;
+    background-color: nth($colores, 2 );
 }
 .btn-color{
-    background-color:#002e33;
-    color: white;
+    background-color:nth($colores, 1 );
+    color: nth($colores,3 );
+    transition-property: background-color;
+    transition-duration: 0.5s;
 }
 .btn-color:hover{
-    background-color: white;
+    background-color: nth($colores, 3 );
 }
 .btn-color2{
-    background-color: #002e33;
-    color: white;
+    background-color: nth($colores, 1 );
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    color:nth($colores, 3 );
 }
 .btn-color2:hover{
-    background-color: #ff7757;
+    background-color:nth($colores, 2 );
 }
 .nav-item-style{
     border-bottom: #002e33 1px solid;
     margin-top: 10px;
     margin-bottom: 10px;
+    transition-duration: 0.5s;
+    transition-property: color;
 }
 .nav-item-style:hover{
-    color: white;
+    color:nth($colores, 3 );
 }
 .cuerpo-del-acordion{
     display: flex;
@@ -57,8 +67,18 @@ font-weight: 200;
     width: 60%;
 }
 .accordion-button:not(.collapsed) {
-    background-color:#ff7757;
-    color: white;
+    background-color:nth($colores, 2 );
+    color:nth($colores, 3 );
+}
+.trajeta{
+    //cuando revisen esto por favor me explican porque no esta agarrando X cantidad de segundos
+    transition: 1s;
+}
+.tarjeta:hover{
+    box-shadow: -1px 10px 42px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow:-1px 10px 42px -7px rgba(0,0,0,0.75);
+    -moz-boz-shadow:-1px 10px 42px -7px rgba(0,0,0,0.75);
+    transform: scale(1.05);
 }
 .tarjeta ul{
     display: flex;

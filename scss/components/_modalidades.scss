@@ -14,8 +14,8 @@
 
         .template-standar-color {
             display: grid;
-            background-color: #002e33;
-            color: white;
+            background-color: nth($colores,1 );
+            color: nth($colores, 3 );
             grid-template-columns: repeat(9, 1fr);
             grid-template-rows: repeat(4, auto);
             grid-template-areas:
@@ -73,12 +73,6 @@
 
     .menu {
         grid-area: nav;
-        background-color: #ff7757;
-        position: sticky;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        height: 100vh;
     }
 
     .contenido {
@@ -94,97 +88,6 @@
 
     .pie {
         grid-area: footer;
-
-        .contacto {
-            background-color: #002e33;
-            display: flex;
-            height: 100vh;
-
-            .contacto-div-titulo {
-                width: 30%;
-
-                h2 {
-                    font-size: 200px;
-                    border-right: white 2px solid;
-                    border-width: 6px;
-                    height: 100%;
-                    color: white;
-                }
-            }
-
-            .contacto-divs {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 70%;
-
-                .contacto-links {
-                    ul {
-                        list-style: none;
-                        margin-left: 50px;
-                        margin-top: 50px;
-                        width: 70%;
-
-                        li {
-                            padding: 10px;
-                            border-bottom: 1px rgb(255, 255, 255) solid;
-
-                            a {
-                                text-decoration: none;
-                                color: white;
-                            }
-                        }
-                    }
-                }
-
-                .contacto-redes {
-                    display: flex;
-                    justify-content: space-around;
-                    text-transform: uppercase;
-
-                    .contacto-redes-ul1 {
-                        list-style: none;
-                        display: flex;
-
-                        li {
-                            padding: 8px;
-                            color: white;
-
-                            a {
-                                text-decoration: none;
-                                color: white;
-
-                                img {
-                                    height: 25px;
-                                    width: 25px;
-                                }
-                            }
-                        }
-                    }
-
-                    .contacto-redes-ul2 {
-                        list-style: none;
-                        display: flex;
-
-                        li {
-                            padding: 8px;
-                            color: white;
-                        }
-
-                        a {
-                            text-decoration: none;
-                            color: white;
-
-                            img {
-                                height: 50px;
-                                width: 50px;
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
     }
 
 }
