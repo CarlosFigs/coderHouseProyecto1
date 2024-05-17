@@ -844,7 +844,9 @@
 
 @media screen and (max-width: 700px) {
   .grid-principal .contenido .modalidades-explicacion .accordion-item .accordion-collapse .div-acordion2 {
-    display: none; } }
+    display: none; }
+  .grid-principal .contenido .nosotros-experiencia .nosotros-experiencia-div1 h2 {
+    font-size: 30px; } }
 
 @media screen and (max-width: 680px) {
   .grid-principal .contenido .nosotrostip .nosotrostip-div2 img {
@@ -953,4 +955,6 @@
   .mod-template .contenido .formulario h2 {
     font-size: 30px; }
   .grid-principal .contenido .nosotros .nosotrosdiv1 .nosotrosdiv1-p {
-    width: fit-content; } }
+    width: fit-content; }
+  .grid-principal .contenido .nosotros-experiencia .nosotros-experiencia-div1 h2 {
+    font-size: 20px; } }
