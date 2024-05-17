@@ -543,7 +543,10 @@
       align-items: center;
       color: #002e33;
       background-color: white;
-      padding: 30px; }
+      background-image: linear-gradient(rgba(0, 46, 51, 0.37), rgba(255, 255, 255, 0.596)), url(../img/logofigsvzla.png);
+      padding: 30px;
+      background-position: center;
+      background-repeat: no-repeat; }
     .mod-template .contenido .formulario h2 {
       text-align: center;
       font-size: 40px;
@@ -568,6 +571,7 @@
       height: 70px; }
     .mod-template .contenido .formulario #enviar {
       padding: 10px;
+      font-size: 25px;
       background-color: #ff7757; }
     .mod-template .contenido .direccion .ubicacion {
       flex-direction: column;
@@ -684,6 +688,15 @@
     font-size: 14px; } }
 
 @media screen and (max-width: 900px) {
+  .grid-principal .menu {
+    background-color: #ff7757;
+    grid-area: nav;
+    position: sticky;
+    z-index: 1;
+    border-radius: 25%;
+    height: min-content;
+    margin-top: 150px;
+    padding: 10px; }
   .grid-principal .header .hero {
     display: grid;
     background-color: #002e33;
@@ -853,7 +866,7 @@
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "logo logo . . . . . . ." ". . titulo texto texto texto texto texto texto" "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2 . . ." ". . . . . . . . ."; } }
 
-@media screen and (max-width: 680px) and (max-width: 630px) {
+@media screen and (max-width: 630px) {
   .grid-principal .contenido .nosotros {
     flex-wrap: wrap; }
   .grid-principal .header .hero .hero-div3 h1 {
@@ -878,7 +891,7 @@
   .grid-principal .contenido .nosotros-historia .nosotros-historia-div2 p {
     font-size: 17px; } }
 
-@media screen and (max-width: 680px) and (max-width: 560px) {
+@media screen and (max-width: 560px) {
   .grid-principal .header .template-standar {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -892,7 +905,7 @@
   .grid-principal .contenido .nosotros-experiencia-div2 {
     flex-direction: column; } }
 
-@media screen and (max-width: 680px) and (max-width: 520px) {
+@media screen and (max-width: 520px) {
   .grid-principal .contenido .nosotrostip .nosotrostip-div1 {
     width: 100%; }
   .grid-principal .contenido .nosotrostip .nosotrostip-div2 {
@@ -908,7 +921,7 @@
   .modalidades-explicacion .accordion-item {
     width: 70%; } }
 
-@media screen and (max-width: 680px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .grid-principal .contenido .modalidades h2 {
     font-size: 15px; }
   .grid-principal .contenido .precios .precios-div1 h3 {
@@ -926,10 +939,18 @@
     grid-template-areas: "logo logo . . titulo . . . ." ". . texto texto texto texto texto texto texto" "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2 imagen2 . ." ". . . . . . . . .";
     height: fit-content; } }
 
-@media screen and (max-width: 680px) and (max-width: 460px) {
+@media screen and (max-width: 460px) {
   .grid-principal .pie .contacto .contacto-div-titulo h2 {
     font-size: 40px; }
   .grid-principal .contenido .modalidades-explicacion .accordion-item .accordion-collapse .cuerpo-del-acordion .card .div-acordion p {
     font-size: 14px; }
   .grid-principal .contenido .precios-informacion .tarjeta .row .col-md-8 .card-body ul {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .mod-template .pie .contacto .contacto-div-titulo h2 {
+    font-size: 40px; } }
+
+@media screen and (max-width: 400px) {
+  .mod-template .contenido .formulario h2 {
+    font-size: 30px; }
+  .grid-principal .contenido .nosotros .nosotrosdiv1 .nosotrosdiv1-p {
+    width: fit-content; } }

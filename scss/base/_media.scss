@@ -63,6 +63,17 @@
     }
 }
 @media screen and (max-width:900px) {
+
+    .grid-principal .menu{
+        background-color: nth($colores, 2 );
+        grid-area: nav;
+        position: sticky;
+        z-index: 1;
+        border-radius: 25%;
+        height: min-content;
+        margin-top: 150px;
+        padding: 10px;
+    }
     .grid-principal .header .hero{
         display: grid;
         background-color: #002e33;
@@ -318,6 +329,7 @@
         "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2 . . ."
         ". . . . . . . . .";
 }
+}
 @media screen and (max-width:630px){
     .grid-principal .contenido .nosotros{
         flex-wrap: wrap;
@@ -442,5 +454,15 @@
     .grid-principal .contenido .precios-informacion .tarjeta .row .col-md-8 .card-body ul{
         font-size: 14px;
     }
+    .mod-template .pie .contacto .contacto-div-titulo h2{
+        font-size: 40px;
+    }
 }
+@media screen and (max-width:400px) {
+    .mod-template .contenido .formulario h2{
+        font-size: 30px;
+    }
+    .grid-principal .contenido .nosotros .nosotrosdiv1 .nosotrosdiv1-p{
+        width: fit-content;
+    }
 }
